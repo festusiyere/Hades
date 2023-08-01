@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing'
-import { of, throwError } from 'rxjs'
+import { of } from 'rxjs'
 import { NO_ERRORS_SCHEMA } from '@angular/core'
 
 import { HomeComponent } from './home.component'

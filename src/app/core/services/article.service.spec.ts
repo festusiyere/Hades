@@ -20,13 +20,4 @@ describe('ArticleService', () => {
   it('should be created', () => {
     expect(articleService).toBeTruthy()
   })
-
-  // it('should return articles', () => {
-
-  //   articleService.getArticles().subscribe((articles) => {
-  //     expect(articles[0]).toEqual(mockData);
-  //   });
-  //   const request = httpTestingController.expectOne('app/contacts');
-  //   request.flush([mockContact]);
-  // })
 })
