@@ -1,0 +1,14 @@
+.articles--container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 0 calc(100% - 98%);
+
+  @include screen(mid) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include screen(small) {
+    display: block;
+  }
+}

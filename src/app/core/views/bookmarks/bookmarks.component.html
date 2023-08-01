@@ -1,6 +1,6 @@
 <div class="bookmark--view">
   <h1>Bookmarks</h1>
-  <ng-template [ngIf]="articles.length">
+  <ng-template [ngIf]="articles.length" [ngIfElse]="empty_content">
     <div class="articles--container">
       <app-news-item *ngFor="let article of articles" [article]="article" [isShowRemove]="true" (removeArticle)="removeItem($event)"></app-news-item>
     </div>

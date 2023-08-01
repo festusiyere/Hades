@@ -35,7 +35,7 @@ header {
     font-weight: 500;
 
     a {
-      color: darken($button-secondary, 2%);
+      color: darken($button-secondary, 40%);
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.7px;
@@ -43,7 +43,7 @@ header {
       transition: color 0.3s ease-in-out;
 
       &:hover {
-        color: darken($button-secondary, 50%);
+        color: darken($button-secondary, 80%);
       }
     }
 
