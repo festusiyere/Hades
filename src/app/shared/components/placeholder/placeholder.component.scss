@@ -1,15 +1,41 @@
+@import '/src/assets/scss/core/variables';
+@import '/src/assets/scss/core/mixins';
 
 .p-item {
-    $back-drop: #f5f6fa;
-    background-color: $back-drop;
-    opacity: 1;
-    border-radius: 8px;
-    margin: 15px 10px;
-    line-height: 100%;
-  
-    @for $i from 1 through 30 {
-      &.p-item--#{$i} {
-        height: $i * 5px;
-      }
+  $back-drop: #f5f6fa;
+  background-color: darken($back-drop, 2%);
+  opacity: 1;
+  border-radius: 8px;
+  margin: 15px 10px;
+  line-height: 100%;
+
+  @for $i from 1 through 50 {
+    &.p-item--#{$i} {
+      height: $i * 5px;
     }
   }
+}
+
+.articles {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @include screen(small) {
+    display: block;
+  }
+
+  .p-container {
+    display: block;
+    width: 32%;
+    margin-bottom: 3.5rem;
+
+    @include screen(small) {
+      width: 100%;
+    }
+
+    @include screen(mid) {
+      width: 49%;
+    }
+  }
+}

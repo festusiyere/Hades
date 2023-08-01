@@ -6,10 +6,11 @@ import { PlaceholderComponent } from './components/placeholder/placeholder.compo
 import { HttpClientModule } from '@angular/common/http'
 import { EmptyStateComponent } from './components/empty-state/empty-state.component'
 import { ErrorStateComponent } from './components/error-state/error-state.component'
+import { CustomErrorComponent } from './component/custom-error/custom-error.component'
 
 @NgModule({
-  declarations: [NavBarComponent, PlaceholderComponent, EmptyStateComponent, ErrorStateComponent],
+  declarations: [NavBarComponent, PlaceholderComponent, EmptyStateComponent, ErrorStateComponent, CustomErrorComponent],
   imports: [CommonModule, RouterModule, HttpClientModule],
-  exports: [NavBarComponent, EmptyStateComponent, PlaceholderComponent, ErrorStateComponent, RouterModule]
+  exports: [NavBarComponent, CustomErrorComponent, EmptyStateComponent, PlaceholderComponent, ErrorStateComponent, RouterModule]
 })
 export class SharedModule {}

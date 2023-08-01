@@ -44,10 +44,23 @@
 
     .date {
       color: darken($button-secondary, 5%);
+      span {
+        color: inherit;
+      }
     }
 
     .bookmark {
       margin-left: auto;
+
+      a {
+        transform: scale(1);
+        transition: transform 0.2s ease-in-out;
+        display: inline-block;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
 
       img {
         width: 0.9rem;

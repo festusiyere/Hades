@@ -5,13 +5,15 @@
   <!-- No error -->
   <ng-template #other_content>
     <!-- Loading Placeholder -->
-    <app-placeholder *ngIf="isLoading; else loaded_content"></app-placeholder>
+    <app-placeholder *ngIf="isLoading; else loaded_content" [isArticles]="true" [number]="20"></app-placeholder>
     <ng-template #loaded_content>
       <ng-template [ngIf]="articles.length">
-        <app-news-item *ngFor="let article of articles" [article]="article"></app-news-item>
+        <div class="articles--container">
+          <app-news-item *ngFor="let article of articles" [article]="article"></app-news-item>
+        </div>
       </ng-template>
       <!-- Empty state for empty article list -->
-      <app-empty-state *ngIf="!articles.length" [isHome]="false"></app-empty-state>
+      <app-empty-state *ngIf="!articles.length" [isHome]="true"></app-empty-state>
     </ng-template>
   </ng-template>
 </div>

@@ -1,1 +1,13 @@
-<p>bookmarks works!</p>
+<div class="bookmark--view">
+  <h1>Bookmarks</h1>
+  <ng-template [ngIf]="articles.length">
+    <div class="articles--container">
+      <app-news-item *ngFor="let article of articles" [article]="article" [isShowRemove]="true" (removeArticle)="removeItem($event)"></app-news-item>
+    </div>
+  </ng-template>
+
+  <ng-template #empty_content>
+    <!-- Empty state for empty article list -->
+    <app-empty-state [isBookmarks]="true"></app-empty-state>
+  </ng-template>
+</div>

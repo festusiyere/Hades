@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core'
 })
 export class PlaceholderComponent {
   @Input() number: number = 10
+  @Input() isArticles: boolean = false
 }

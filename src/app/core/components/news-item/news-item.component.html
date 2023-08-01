@@ -13,14 +13,25 @@
 
   <div class="other--details">
     <div class="author">{{ article.author }}</div>
-    <div class="date">&nbsp;•&nbsp;{{ article.publishedAt | date }}</div>
+    <div class="date">
+      <span *ngIf="article.author">&nbsp;•</span>
+      {{ article.publishedAt | date }}
+    </div>
     <div class="bookmark">
-      <ng-template [ngIf]="number > 0.6" [ngIfElse]="default">
-        <img src="./assets/svg/bookmark-add.svg" alt="Bookmark" />
+      <ng-template [ngIf]="isBookmarked" [ngIfElse]="default">
+        <a href="" (click)="removeFromBookmarks($event, article)" *ngIf="isShowRemove; else check_content">
+          <img src="./assets/svg/bookmark-remove.svg" alt="Bookmark" />
+        </a>
+        <ng-template #check_content>
+          <span>
+            <img src="./assets/svg/bookmark-check.svg" alt="Bookmark" />
+          </span>
+        </ng-template>
       </ng-template>
-
       <ng-template #default>
-        <img src="./assets/svg/bookmark-check.svg" alt="Bookmark" />
+        <a href="" (click)="addToBookmarks($event, article)">
+          <img src="./assets/svg/bookmark-add.svg" alt="Bookmark" />
+        </a>
       </ng-template>
     </div>
   </div>

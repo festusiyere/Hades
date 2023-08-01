@@ -1,0 +1,18 @@
+@import '/src/assets/scss/core/variables';
+@import '/src/assets/scss/core/mixins';
+
+.bookmark--view {
+  h1 {
+    margin-bottom: 1rem;
+  }
+  .articles--container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include screen(small) {
+      display: block;
+    }
+  }
+}

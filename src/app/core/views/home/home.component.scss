@@ -2,12 +2,14 @@
 @import '/src/assets/scss/core/mixins';
 
 .home--view {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  .articles--container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-  @include screen(small) {
-    display: block;
+    @include screen(small) {
+      display: block;
+    }
   }
 }
