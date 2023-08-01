@@ -1,4 +1,6 @@
-export const mockArticles = [
+import { Article } from '../../types/Article'
+
+export const mockArticles: Article[] = [
   {
     source: {
       id: 'wired',
@@ -59,7 +61,7 @@ export const mockArticles = [
   },
   {
     source: {
-      id: null,
+      id: 'life',
       name: 'Lifehacker.com'
     },
     author: 'Allie Chanthorn Reinmann',

@@ -20,8 +20,21 @@ describe('EmptyStateComponent', () => {
   })
 
   it('should not show message', () => {
-    const errorMessageElem: HTMLElement = fixture.nativeElement
-    const div = errorMessageElem.querySelector('empty--state')!
-    expect(div).toBeFalsy()
+    const elem = fixture.nativeElement.querySelector('.empty--state p')
+    expect(elem).toBeFalsy()
+  })
+
+  it('should show message for home prop', () => {
+    component.isHome = true
+    fixture.detectChanges()
+    const elem = fixture.nativeElement.querySelector('.empty--state p')
+    expect(elem.textContent).toContain("There's no article at the moment")
+  })
+
+  it('should show message for Bookmark prop', () => {
+    component.isBookmarks = true
+    fixture.detectChanges()
+    const elem = fixture.nativeElement.querySelector('.empty--state p')
+    expect(elem.textContent).toContain("You've not bookmarked any article yet")
   })
 })

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-
+import { RouterTestingModule } from '@angular/router/testing'
 import { CustomErrorComponent } from './custom-error.component'
 
 describe('CustomErrorComponent', () => {
@@ -8,6 +8,7 @@ describe('CustomErrorComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [CustomErrorComponent]
     })
     fixture = TestBed.createComponent(CustomErrorComponent)
@@ -20,8 +21,7 @@ describe('CustomErrorComponent', () => {
   })
 
   it('should contain error message', () => {
-    const errorMessageElem: HTMLElement = fixture.nativeElement
-    const h4 = errorMessageElem.querySelector('h4')!
-    expect(h4.textContent).toEqual('banner works!')
+    const elem = fixture.nativeElement.querySelector('h4')
+    expect(elem.textContent).toContain('You seem lost!')
   })
 })

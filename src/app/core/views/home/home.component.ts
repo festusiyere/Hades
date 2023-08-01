@@ -9,14 +9,16 @@ import { Subscription } from 'rxjs/internal/Subscription'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnDestroy {
+export class HomeComponent implements OnDestroy, OnInit {
   articles: Article[] = []
   isLoading: boolean = false
   error: string = ''
-  subscription$: Subscription
+  subscription$: Subscription = new Subscription()
 
-  constructor(private articleService: ArticleService, private storeService: StoreService) {
-    this.subscription$ = this.storeService.getArticles().subscribe((data: any) => {
+  constructor(private articleService: ArticleService, private storeService: StoreService) {}
+
+  ngOnInit(): void {
+    this.subscription$ = this.storeService.getArticles()?.subscribe((data: any) => {
       if (data) {
         this.articles = data
         return
