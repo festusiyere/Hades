@@ -1,0 +1,58 @@
+body {
+  font-family: $primary-font;
+  background-color: $bg-water;
+  color: $black;
+  font-weight: 400;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span {
+  text-rendering: auto;
+  color: $black;
+  font-family: $primary-font;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: $button-primary;
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.5px;
+  line-height: 1.4;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  span,
+  a {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}

@@ -1,0 +1,27 @@
+<div class="news--item">
+  <div class="item--image">
+    <img [src]="article.urlToImage" [alt]="article.title" onerror="this.onerror=null; this.src='./assets/svg/fallback-image.svg'" lazy />
+  </div>
+  <a [href]="article.url" target="_blank" class="title">
+    <h2>
+      {{ article.title }}
+    </h2>
+  </a>
+  <div class="description">
+    <p>{{ description }}</p>
+  </div>
+
+  <div class="other--details">
+    <div class="author">{{ article.author }}</div>
+    <div class="date">&nbsp;•&nbsp;{{ article.publishedAt | date }}</div>
+    <div class="bookmark">
+      <ng-template [ngIf]="number > 0.6" [ngIfElse]="default">
+        <img src="./assets/svg/bookmark-add.svg" alt="Bookmark" />
+      </ng-template>
+
+      <ng-template #default>
+        <img src="./assets/svg/bookmark-check.svg" alt="Bookmark" />
+      </ng-template>
+    </div>
+  </div>
+</div>

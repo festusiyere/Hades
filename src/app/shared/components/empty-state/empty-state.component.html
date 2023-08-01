@@ -1,0 +1,11 @@
+<div class="empty--state">
+  <ng-template [ngIf]="isBookmarks">
+    <img src="./assets/svg/empty.svg" alt="Bookmark" />
+    <p>You've not bookmarked any article yet</p>
+  </ng-template>
+
+  <ng-template [ngIf]="isHome">
+    <img src="./assets/svg/empty.svg" alt="Bookmark" />
+    <p>There's no article at the moment</p>
+  </ng-template>
+</div>

@@ -1,0 +1,17 @@
+<div class="home--view">
+  <!-- In the event of error -->
+  <app-error-state [message]="'An error occurred'" *ngIf="error; else other_content"></app-error-state>
+
+  <!-- No error -->
+  <ng-template #other_content>
+    <!-- Loading Placeholder -->
+    <app-placeholder *ngIf="isLoading; else loaded_content"></app-placeholder>
+    <ng-template #loaded_content>
+      <ng-template [ngIf]="articles.length">
+        <app-news-item *ngFor="let article of articles" [article]="article"></app-news-item>
+      </ng-template>
+      <!-- Empty state for empty article list -->
+      <app-empty-state *ngIf="!articles.length" [isHome]="false"></app-empty-state>
+    </ng-template>
+  </ng-template>
+</div>

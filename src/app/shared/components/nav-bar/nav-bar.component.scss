@@ -1,0 +1,54 @@
+@import '/src/assets/scss/core/variables';
+@import '/src/assets/scss/core/mixins';
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: $bg-water;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid $bg-mint;
+
+  @include screen(small) {
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .logo {
+    svg {
+      width: 100px;
+      height: auto;
+
+      @include screen(small) {
+        width: 70px;
+      }
+    }
+  }
+
+  .links {
+    margin-left: auto;
+    font-weight: 500;
+
+    a {
+      color: darken($button-secondary, 2%);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      font-size: 0.775rem;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: darken($button-secondary, 50%);
+      }
+    }
+
+    @include screen(small) {
+      margin-right: 0;
+    }
+  }
+}

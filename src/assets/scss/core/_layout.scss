@@ -1,0 +1,15 @@
+main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 60px;
+  width: 100%;
+
+  @include screen(small) {
+    padding: 0 30px;
+  }
+}

@@ -1,0 +1,15 @@
+
+.p-item {
+    $back-drop: #f5f6fa;
+    background-color: $back-drop;
+    opacity: 1;
+    border-radius: 8px;
+    margin: 15px 10px;
+    line-height: 100%;
+  
+    @for $i from 1 through 30 {
+      &.p-item--#{$i} {
+        height: $i * 5px;
+      }
+    }
+  }

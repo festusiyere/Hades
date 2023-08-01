@@ -1,0 +1,25 @@
+@import '/src/assets/scss/core/variables';
+
+:host {
+  width: 100%;
+  display: block;
+}
+
+.error--state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+
+  img {
+    width: 50px;
+    margin-bottom: 0rem;
+    display: block;
+  }
+
+  p {
+    color: darken($button-secondary, 20%);
+    letter-spacing: 0.3px;
+  }
+}

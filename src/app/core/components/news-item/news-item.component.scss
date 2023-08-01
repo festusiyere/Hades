@@ -1,0 +1,58 @@
+@import '/src/assets/scss/core/variables';
+@import '/src/assets/scss/core/mixins';
+
+:host {
+  display: block;
+  width: 32%;
+  margin-bottom: 3.5rem;
+
+  @include screen(small) {
+    width: 100%;
+  }
+
+  @include screen(mid) {
+    width: 49%;
+  }
+}
+
+.news--item {
+  .item--image {
+    min-height: 15rem;
+    img {
+      border-radius: 5px;
+      display: block;
+      max-width: 100%;
+      aspect-ratio: 2 / 1.1;
+    }
+  }
+
+  .title {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .description {
+    p {
+      margin: 12px 0;
+    }
+  }
+
+  .other--details {
+    display: flex;
+    font-size: 0.8rem;
+
+    .date {
+      color: darken($button-secondary, 5%);
+    }
+
+    .bookmark {
+      margin-left: auto;
+
+      img {
+        width: 0.9rem;
+        height: auto;
+      }
+    }
+  }
+}
