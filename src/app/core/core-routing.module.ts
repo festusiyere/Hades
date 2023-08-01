@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component'
 import { BookmarksComponent } from './views/bookmarks/bookmarks.component'
 import { HomeComponent } from './views/home/home.component'
-import { CustomErrorComponent } from '../shared/component/custom-error/custom-error.component'
+import { CustomErrorComponent } from '../shared/components/custom-error/custom-error.component'
 
 const routes: Routes = [
   {

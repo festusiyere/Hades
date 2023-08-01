@@ -6,7 +6,7 @@ import { PlaceholderComponent } from './components/placeholder/placeholder.compo
 import { HttpClientModule } from '@angular/common/http'
 import { EmptyStateComponent } from './components/empty-state/empty-state.component'
 import { ErrorStateComponent } from './components/error-state/error-state.component'
-import { CustomErrorComponent } from './component/custom-error/custom-error.component'
+import { CustomErrorComponent } from './components/custom-error/custom-error.component'
 
 @NgModule({
   declarations: [NavBarComponent, PlaceholderComponent, EmptyStateComponent, ErrorStateComponent, CustomErrorComponent],
